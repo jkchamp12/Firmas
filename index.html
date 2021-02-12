@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sibudelas Centralizado</title>
+    <meta name="twitter:title" content="Sibudelas Centralizado - UDELAS">
+    <meta property="og:type" content="website">
+    <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
+    <meta property="og:image" content="../../../assets/img/leer2.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,greek-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="../../../../assets/js/api/API.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top bg-white" style="font-family: 'Open Sans', sans-serif;">
+        <div class="container-fluid"><a href="/"><img src="assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
+                <ul class="nav navbar-nav ml-auto" id="items-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">¿QUIÉNES SOMOS?</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/#noticias">NOTICIAS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/equipo">EQUIPO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/login">HERRAMIENTAS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="d-flex flex-column" id="top-sec">
+        <div class="container" style="padding: 0px;">
+            <div class="row" style="width: 100%;margin: 0px;margin-right: 0;margin-left: 0;padding: 0px;">
+                <div class="col-5 offset-0 offset-sm-1 offset-md-1 offset-lg-0 offset-xl-0 text-center align-self-center" id="title-col">
+                    <h1 class="border rounded titulo_header" data-aos="fade" data-aos-duration="400" data-aos-delay="200" style="color: #ffffff;background-color: #292c2f;">SIBUDELAS</h1>
+                    <h1 class="border rounded titulo_header" data-aos="fade" data-aos-duration="400" data-aos-delay="400">CENTRALIZADO</h1>
+                </div>
+                <div class="col" id="img-col">
+                    <div class="align-items-baseline" id="header_top"><img class="d-table float-right" data-aos="fade-left" data-aos-duration="400" data-aos-delay="450" id="logo_izquierda" src="assets/img/leer2.svg" alt="logo_izq"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container"><a class="btn btn-link btn-block align-content-end swing animated infinite border-0" role="button" id="next-noticia" style="color: #292c2f;margin: 5px;background-color: rgba(71,182,255,0);" href="#noticias"><i class="icon ion-ios-arrow-down font-weight-bold" style="font-size: 50px;"></i></a></div>
+    </section>
+    <div class="modal fade" role="dialog" tabindex="-1" id="videoPresentacion">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: rgba(255,255,255,0);"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" id="ytvideo" style="background-color: rgba(255,255,255,0);height: auto;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?loop=1&amp;playlist=ScMzIvxBSi4&amp;controls=0" width="100%" height="auto" style="height: 30em;"></iframe></div>
+            </div>
+        </div>
+    </div>
+    <section class="text-center" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="50" id="noticias" style="width: 100%;height: 100vh;padding-top: 5em;padding-bottom: 15px;">
+        <div class="container text-center" style="width: 100%;height: 90vh;margin-top: 1em;padding-bottom: 5em;">
+            <div class="carousel slide" data-ride="carousel" id="carousel-1" style="height: 100%;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="jumbotron hero-nature carousel-hero" style="background-image: url(&quot;https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_960_720.jpg&quot;);">
+                            <h2 class="hero-title" style="font-family: 'Open Sans', sans-serif;">Nuevo Sistema</h2>
+                            <p class="text-justify hero-subtitle" style="font-family: 'Open Sans', sans-serif;background-color: rgba(42,41,41,0.68);">Sibudelas está lanzando un nuevo sistema para el manejo de los paz y salvo de manera digital, mantente informado del avance del mismo en todo momento.</p>
+                            <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#" data-toggle="modal" data-target="#videoPresentacion">Más Información</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="min-height: 444px;">
+                        <div class="jumbotron hero-photography carousel-hero" style="background: url(&quot;assets/img/book-1052014_1920.jpg&quot;);background-size: cover;min-height: 444px;">
+                            <h1 class="hero-title">Conoce SIBUDELAS</h1>
+                            <p class="hero-subtitle" style="background-color: rgba(42,41,41,0.68);">Una unidad imprescindible para el manejo del conocimiento dentro de UDELAS ya sea físico o digital, conoce nuestra visión, objetivos y más.</p>
+                            <p><a class="btn btn-primary btn-lg hero-button" role="button" href="/nosotros">Ver Más</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="jumbotron hero-technology carousel-hero" style="background-image: url(&quot;https://cdn.pixabay.com/photo/2020/04/04/13/41/corona-5002341_960_720.jpg&quot;);min-height: 444px;">
+                            <h1 class="hero-title">Nueva Realidad</h1>
+                            <p class="hero-subtitle" style="background-color: rgba(42,41,41,0.68);">Ha pasado un año de pandemia, todos nos hemos adaptado a la nueva realidad que vivimos y en SIBUDELAS no ha sido diferente.</p>
+                            <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Aprender Más</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-1" data-slide-to="1"></li>
+                    <li data-target="#carousel-1" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" id="sitios" style="margin-top: 0;">
+        <div class="container" style="margin-top: 1em;">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading font-weight-bold" style="font-family: 'Open Sans', sans-serif;margin-top: 1em;">Nuestros Sitios</h2>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 1em;">
+                <div class="col-sm-4 d-flex justify-content-center align-items-center" style="font-family: 'Open Sans', sans-serif;"><a href="http://www.udelas.ac.pa/" style="color: #d72323;" target="_blank">
+                        <div class="team-member"><img class="rounded img-fluid" src="http://www.udelas.ac.pa/site/templates//images/logo.png" loading="lazy">
+                            <h4>UDELAS</h4>
+                            <p class="text-muted">Sitio Oficial</p>
+                        </div>
+                    </a></div>
+                <div class="col-sm-4 d-flex justify-content-center align-items-center" style="font-family: 'Open Sans', sans-serif;"><a href="http://repositorio2.udelas.ac.pa/" style="color: #d72323;" target="_blank">
+                        <div class="team-member"><img class="rounded img-fluid" src="assets/img/logorepositorio.png" width="255" height="200" loading="lazy" style="width: 140px;">
+                            <h4>Repositorio Institucional</h4>
+                        </div>
+                    </a></div>
+                <div class="col-sm-4 d-flex justify-content-center align-items-center" style="font-family: 'Open Sans', sans-serif;"><a href="http://biblioteca.udelas.ac.pa/" style="color: #d72323;" target="_blank">
+                        <div class="team-member"><img class="rounded img-fluid" src="https://www.ebsco.com/sites/g/files/nabnos191/files/acquiadam_assets/68667178.jpg" width="255" loading="lazy">
+                            <h4>Catálogo en Línea</h4>
+                            <p class="text-muted">Sitio Oficial</p>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section id="eventos" style="margin-top: 5em;margin-bottom: 5em;">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="font-family: 'Open Sans', sans-serif;">
+                    <h2 class="text-center font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Eventos</h2>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 1em;">
+                <div class="col">
+                    <div class="blog-slider">
+                        <div class="blog-slider__wrp swiper-wrapper">
+                            <div class="blog-slider__item swiper-slide">
+                                <div></div>
+                                <div class="blog-slider__img"><img src="assets/img/vacio.png"></div>
+                                <div class="blog-slider__content"><span class="blog-slider__code">Sin fecha</span><div class="blog-slider__title">Sin Eventos</div><div class="blog-slider__text">De momento parece que no hay eventos programados, quédate atento por si hay alguna novedad </div><a class="class=&quot;blog-slider__button" href="#">Ver Más</a></div>
+                            </div>
+                            <div class="blog-slider__pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="fixed-social">
+        <div><a class="fixed-facebook" href="https://www.facebook.com/sibudelas" target="_blank"><i class="fa fa-facebook"></i><span>&nbsp;Facebook</span></a></div>
+        <div><a class="fixed-instagram" href="#" target="_blank"><i class="fa fa-instagram"></i><span>&nbsp;Instagram</span></a></div>
+        <div><a class="fixed-twitter" href="#" target="_blank"><i class="fa fa-twitter"></i><span>&nbsp;Twitter</span></a></div>
+        <div><a class="fixed-youtube" href="https://www.youtube.com/channel/UCzzwzvho6f9Ng1vhQq0FDFg" target="_blank"><i class="fa fa-youtube-play"></i><span>&nbsp;Youtube</span></a></div>
+        <div><a class="fixed-youtube" href="https://sibudelas.blogspot.com/" target="_blank" style="background-color: rgb(255,87,34);"><i class="fab fa-blogger-b"></i><span style="background-color: #FF5722;">&nbsp;Blog</span></a></div>
+    </div>
+    <footer style="background-color: rgba(0,0,0,0.68);">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation"><a href="#" style="overflow: visible"><img src="assets/img/logo-SIBUDELAS-Blanco.png" width="100%"></a>
+                <p class="company-name" style="padding-top: 55px;color: rgb(255,255,255);">SIBUDELAS © 2020</p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">Corregimiento de Ancón, Albrook, Calle Paseo Diógenes de la Rosa,&nbsp;(antiguo Paseo Andrews)<br></span> Panamá</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"><strong>+507&nbsp;315-1825</strong></p>
+                </div>
+                <div><i class="fa fa-link footer-contacts-icon"></i>
+                    <p> <a href="http://www.udelas.ac.pa/" target="_blank" style="color: #fffefe;"><strong>http://www.udelas.ac.pa/</strong></a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 footer-about">
+                <h4 style="color: rgb(255,255,255);">Acerca de SIBUDELAS Centralizado</h4>
+                <p style="color: rgb(255,255,255);"> SIBUDELAS Centralizado nace como un proyecto que tiene como objetivo llevar a la actual generación tecnológica todos los procesos realizados por SIBUDELAS.</p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fab fa-blogger-b"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/api/API.min.js"></script>
+</body>
+
+</html>
