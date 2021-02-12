@@ -380,7 +380,7 @@ function aprobarTrabajo() {
       repo = 1;
     $.ajax({
       type: "POST",
-      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      url: direccionAPI+'/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
       data: { repositorio : repo, observacion : obs},
       success: function(data){
       setTimeout(function() {
@@ -438,7 +438,7 @@ function noAprobarTrabajo() {
 <script type="text/javascript">
 
 function descargarPS() {
-    var idps = $('#idpsText').val();   window.open('http://api.sibudelas.local/pazysalvo/documento/'+idps+'/'+Cookies.get('session_token'));
+    var idps = $('#idpsText').val();   window.open(direccionAPI+'/pazysalvo/documento/'+idps+'/'+Cookies.get('session_token'));
     
 }
 //$(document).ready(aprobarTrabajo);

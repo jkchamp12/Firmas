@@ -294,7 +294,7 @@ const facultades = new SlimSelect({
 
   $.get(direccionAPI+"/facultades/"+Cookies.get('session_token'), function(data, status){
     facultades.setData(data.items);
-    $.get("http://api.sibudelas.local/carreras/"+data.items[0].value+"/"+Cookies.get('session_token'), function(data, status){
+    $.get(direccionAPI+"/carreras/"+data.items[0].value+"/"+Cookies.get('session_token'), function(data, status){
     carreras.setData(data.items);
   });
   });
