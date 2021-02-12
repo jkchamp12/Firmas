@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sibudelas Centralizado</title>
+    <meta name="twitter:title" content="Sibudelas Centralizado - UDELAS">
+    <meta property="og:type" content="website">
+    <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
+    <meta property="og:image" content="../../../assets/img/leer2.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../../../assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,greek-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="../../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../../../assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="../../../../assets/js/api/API.min.js"></script>
+</head>
+
+<body style="background-image: url(&quot;../../../../assets/img/md_login.jpg&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md sticky-top bg-white" style="font-family: 'Open Sans', sans-serif;">
+        <div class="container-fluid"><a href="/"><img src="../../../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
+                <ul class="nav navbar-nav ml-auto" id="items-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">¿QUIÉNES SOMOS?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#noticias">NOTICIAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/equipo">EQUIPO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/login">HERRAMIENTAS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="border rounded login-card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" style="font-family: Roboto, sans-serif;filter: blur(0px);">
+        <p class="profile-name-card"> <i class="fa fa-unlock-alt d-inline" style="width:0;height:0;font-size:56px;color:rgb(104,145,162);"></i></p>
+        <form id="loginForm" class="form-signin" action="" method="PUT"><span class="reauth-email" style="margin:11px;"> </span><input class="form-control" type="password" id="inputPassword" required="" placeholder="Nueva Contraseña" name="contrasena" style="margin-bottom: 0px;" autofocus="" autocomplete="off" minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"><span id="mensajeP" style="color: var(--danger);font-size: 12px;"></span><input class="form-control" type="password" id="inputPassword-1" required="" placeholder="Repetir Contraseña" name="contrasenaRepetir" style="margin-top: 10px;" minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" autocomplete="off"><span id="mensajeS" style="color: var(--danger);font-size: 12px;"></span><input class="form-control d-none" type="text" id="recaptchaResponse" readonly="" name="recaptcha"><span class="reauth-email" style="margin:11px;"> </span>      <script src="https://www.google.com/recaptcha/api.js?render=6Ld_zQEVAAAAABBSckt82-ue84VpZKyK7JJ8oqHH"></script>
+  <script>
+  grecaptcha.ready(function() {
+      grecaptcha.execute('6Ld_zQEVAAAAABBSckt82-ue84VpZKyK7JJ8oqHH', {action: '/'}).then(function(token) {
+            var recaptchaResponse = document.getElementById('recaptchaResponse');
+    recaptchaResponse.value = token;
+      });
+  });
+  </script>
+<button class="btn btn-primary btn-block btn-lg btn-signin" style="font-family:Roboto, sans-serif;font-size:16px;font-weight:normal;font-style:normal;" type="submit">Recuperar</button></form>
+        <div class="text-center"></div>
+    </div>
+    <footer style="background-color: rgba(255,255,255,0.23);">
+        <div class="row">
+            <div class="col-1 col-sm-6 col-md-4 footer-navigation">
+                <h3><a href="#"><img src="../../../../assets/img/logo-SIBUDELAS-Blanco.png" width="60%"></a></h3>
+                <p class="company-name" style="padding-top: 55px;color: rgb(4,4,4);">SIBUDELAS © 2020</p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="text-left new-line-span">Corregimiento de Ancón, Albrook, Calle Paseo Diógenes de la Rosa,&nbsp;(antiguo Paseo Andrews)<br></span> Panamá</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"><strong>+507&nbsp;315-1825</strong></p>
+                </div>
+                <div><i class="fa fa-link footer-contacts-icon"></i>
+                    <p> <a href="http://www.udelas.ac.pa/" target="_blank" style="color: #a2271f;"><strong>http://www.udelas.ac.pa/</strong></a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 footer-about">
+                <h4 style="color: rgb(13,12,12);">Acerca de SIBUDELAS Centralizado</h4>
+                <p style="color: rgb(0,0,0);"> SIBUDELAS Centralizado nace como un proyecto que tiene como objetivo llevar a la actual generación tecnológica todos los procesos realizados por SIBUDELAS.</p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fab fa-blogger-b"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" role="dialog" tabindex="-1" id="errorMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Algo a salido mal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Al parecer no pudimos completar su petición.</p><i class="fa fa-warning" style="font-size: 63px;color: var(--orange);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="contrasenasMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Algo a salido mal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Al parecer las contraseñas no coinciden, asegúrese de que ambas son iguales.</p><i class="fa fa-close" style="font-size: 63px;color: var(--danger);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="workingMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Trabajando en su Petición</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Estamos moviendo cosas para realizar su petición.</p><i class="fa fa-cog fas fa-cog fa-spin" style="font-size: 63px;color: var(--info);"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="testMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>The content of your modal.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
+    <script src="../../../../assets/js/script.min.js"></script>
+    <script src="../../../../assets/js/login/recuperar.min.js"></script>
+</body>
+
+</html>

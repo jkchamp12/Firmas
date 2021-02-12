@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sibudelas Centralizado</title>
+    <meta name="twitter:title" content="Sibudelas Centralizado - UDELAS">
+    <meta property="og:type" content="website">
+    <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
+    <meta property="og:image" content="../../../assets/img/leer2.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../../assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,greek-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../../assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="../../../../assets/js/api/API.min.js"></script>
+</head>
+
+<body style="margin-top: 6em;">
+    <div class="main-leftsidebar-div" data-component="leftsidebar">
+        <div class="leftsidebar">
+            <ul class="nav list-group flex-column d-inline-block first-menu scrollbar-indigo thin first-main-menu">
+                <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="/app/" style="color: rgb(74,82,108);"><i class="fa fa-dashboard"><span class="ml-2 align-middle" href="#">Panel de Control</span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-book"><span class="ml-2 align-middle" href="#">Trabajo de Grado</span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes">Pendientes</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes/estudiantes">Trámites Detenidos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="ps-especial"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="far fa-bookmark"><span class="ml-2 align-middle" href="#">Paz y Salvo Especiales</span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/especiales/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/ver">Verificar Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3 d-none"><a class="nav-link" href="/app/ps/especiales/pendientes">Pendientes</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/pendientes/estudiantes">Trámites Detenidos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="morosidadNav"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-money"><span class="ml-2 align-middle" href="#">Morosidades
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/morosidades/nueva">Crear Nueva</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/morosidades/ver">Ver Todas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="pagosNav"><a class="nav-link" style="color: rgb(74,82,108);"><i class="fa fa-credit-card"><span class="ml-2 align-middle" href="#">Pagos
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/pagos">Ver Todos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-bell"><span class="ml-2 align-middle" href="#">Notificaciones <span id="notifications" class="badge badge-danger badge-counter" style="font-size: 10px;margin-left: 7px;">0</span>
+    </span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="estadisticasNav"><a class="nav-link" href="/app/estadisticas" style="color: rgb(74,82,108);"><i class="fa fa-pie-chart"><span class="ml-2 align-middle" href="#">Estadísticas
+    </span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="usuariosNav"><a class="nav-link" style="color: rgb(74,82,108);"><i id='usuariosLAT' class="fa fa-users"><span class="ml-2 align-middle" href="#">Usuarios
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/usuarios">Ver Todos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white" style="font-family: 'Open Sans', sans-serif;margin-bottom: 3em;">
+        <div class="container-fluid"><a href="#"><img src="../../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
+                <ul class="nav navbar-nav ml-auto" id="items-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">¿QUIÉNES SOMOS?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">NOTICIAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">MANUAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACTO</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+            <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">MI CUENTA</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="/app/usuario">Ver Más</a><a class="dropdown-item" href="/app/login">Salir</a></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-left: 5em;">
+        <h2>Información de Solicitud</h2>
+        <div class="text-center" style="width: 100%;"><input class="border rounded border-dark d-none" type="text" id="idpsText" placeholder="Buscar por Ideintificador de Trabajo de Grado" style="width: 50%;margin: auto;padding: 10px;" pattern="^\d+$"></div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Información</th>
+                        <th>Dato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Título</h4>
+                        </td>
+                        <td><span id="tituloSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Asesor</h4>
+                        </td>
+                        <td><span id="asesorSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Porcentaje</h4>
+                        </td>
+                        <td><span id="porcentajeSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Sede</h4>
+                        </td>
+                        <td><span id="sedeSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Facultad</h4>
+                        </td>
+                        <td><span id="facultadSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Carrera</h4>
+                        </td>
+                        <td><span id="carreraSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Modalidad</h4>
+                        </td>
+                        <td><span id="modalidadSp" class="infospan"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Documento</h4>
+                        </td>
+                        <td><a id="linkDocumento" class="infospan btn text-primary" target="_blank"><span id="spanLink" class="infospan">Abrir documento</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="margin: 0 3em;">Estudiantes</h4>
+                        </td>
+                        <td>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Cédula</th>
+                                            <th>Estatus</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listaEstudiantes"></tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form id="form-test" class="d-none">
+            <div class="form-group" id="aspecto-forma-tcualitativa">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Criterio</th>
+                                <th>Evaluación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Márgenes correctos<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="margens-2" value="Cumple" name="margens"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="margenn-2" value="No Cumple" name="margens" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hoja de presentación acorde con el manual<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="margens-3" value="Cumple" name="h-presentacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="margenn-3" value="No Cumple" name="h-presentacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1.5 de interlineado<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-1" value="Cumple" name="interlineado1-5"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-2" value="No Cumple" name="interlineado1-5" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Título de al menos 15 palabras<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-1" value="Cumple" name="titulo-15palabras"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-2" value="No Cumple" name="titulo-15palabras" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Contenido General<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-1" value="Cumple" name="contenido-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-2" value="No Cumple" name="contenido-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hoja de separación de capítulo<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="hoja-separacion-1" value="Cumple" name="hoja-separacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-3" value="No Cumple" name="hoja-separacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Letra arial 12&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Encabezado de los capítulos en letra arial 12, sin puntuación al final "></i>&nbsp;</td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-1" value="Cumple" name="letra-arial12"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-2" value="No Cumple" name="letra-arial12" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sin sangría en los párrafos<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-1" value="Cumple" name="sangria-parrafo"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-2" value="No Cumple" name="sangria-parrafo" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Los índices al final del documento<br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-1" value="Cumple" name="indices-final"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-3" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Logo correcto <i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="(2cm. x 4.5cm)"></i><br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="logo-correcto-1" value="Cumple" name="logo-correcto"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-4" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paginación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="(páginas preliminares:  abarca desde la portada hasta la separata de capítulo I, estas se cuentan pero no se enumeran) -  Las páginas de separatas ninguna lleva numeración, pero se cuentan. Los anexos no se enumeran, pero llevan la hoja de separata individual. "></i><br></td>
+                                <td>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="paginacionC-1" value="Cumple" name="paginacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="paginacionI-1" value="No Cumple" name="paginacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Resumen&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="En este apartado se hace una breve presentación del trabajo que permita visualizar sintéticamente su contenido. Al finalizar una investigación se debe describir lo más importante de la misma, mínimo 150 palabras, máximo 250 palabras; incluyendo: primer párrafo (título, objetivos de la investigación descritos como propósitos, segundo párrafo diseño y tipo de estudio,  tercer párrafo resultados y conclusiones."></i><br></td>
+                            <td>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenC" value="Cumple" name="resumen"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenN" value="No Cumple" name="resumen" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Palabras claves&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Incluir al menos 5 a 7 palabras o conceptos claves del trabajo de investigación. Se colocarán en tamaño N°10 Arial, negrita. "></i><br></td>
+                            <td>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC" value="Cumple" name="palabras-claves"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN" value="No Cumple" name="palabras-claves" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abstract&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Traducir al idioma inglés el resumen.  Se colocarán las keywords en tamaño N°10 Arial, negrita"></i><br></td>
+                            <td>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC-1" value="Cumple" name="abstract"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN-1" value="No Cumple" name="abstract" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Introducción&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Una breve descripción del tema como parte de la introducción, en donde se oriente al lector y se describa utilizando una redacción clara, lo que va a contener cada capítulo.  Se redacta al terminar la tesis."></i><br></td>
+                            <td>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC" value="Cumple" name="introduccion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI" value="No Cumple" name="introduccion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-right"><button class="btn btn-primary btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="rubricaBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
+    onclick="guardarRubrica()">Aprobar</button>
+
+<script type="text/javascript">
+
+function guardarRubrica() {
+    var formData = $("#form-test");
+    var data = getFormData(formData);
+    alert(JSON.stringify(data));
+   /* $.ajax({
+      type: "POST",
+      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      data: { repositorio : repo, observacion : obs},
+      success: function(data){
+        $('#guardandoMD').modal('hide');
+        $("#aprobarBTN").hide();
+        $("#noAprobarBTN").hide();
+        $("#checkField").hide();
+    },
+    error: function(data){
+        alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
+    },
+    timeout: 15000
+    });*/
+}
+    
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
+    
+</script></div>
+        </form><textarea id="observacionTA" class="d-none" style="width: 100%;margin-right: 3em;margin-left: 3em;" placeholder="Observación"></textarea>
+        <div id="repositorioCheck" class="d-none">
+            <fieldset class="border-dark" style="padding-top: 1em;">
+                <div class="custom-control custom-radio"><input type="radio" id="aprobarCHK" class="custom-control-input" name="customRadio" checked=""><label class="custom-control-label font-weight-bold" for="aprobarCHK">Aprobar para Repositorio</label></div>
+                <div class="custom-control custom-radio"><input type="radio" id="intraCHK" class="custom-control-input" name="customRadio"><label class="custom-control-label font-weight-bold" for="intraCHK">Aprobar para Intranet</label></div>
+            </fieldset>
+        </div>
+        <div class="text-center d-none" id="aprobarBTNS"><button class="btn btn-primary btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="aprobarBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
+    onclick="aprobarTrabajo()">Aprobar</button>
+
+<script type="text/javascript">
+
+function aprobarTrabajo() {
+    //$('#guardandoMD').removeClass('fade');
+    $('#guardandoMD').modal('show');
+    var repo = 0;
+    var obs = $('#observacionTA').val();
+    var idps = $('#idpsText').val();
+    if($('#aprobarCHK').is(':checked'))
+      repo = 1;
+    $.ajax({
+      type: "POST",
+      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      data: { repositorio : repo, observacion : obs},
+      success: function(data){
+      setTimeout(function() {
+            $('#guardandoMD').modal('hide');
+            $('#correctoMD').modal('show');
+        },500);
+        $("#aprobarBTN").addClass('d-none');
+        $("#noAprobarBTN").addClass('d-none');
+        $("#repositorioCheck").addClass('d-none');
+        $("#observacionTA").addClass('d-none');
+    },
+    error: function(jqXHR, exception){
+        /*var json = $.parseJSON(jqXHR.responseText);*/
+        //alert(jqXHR.responseText);
+        setTimeout(function() {
+            $('#guardandoMD').modal('hide');
+            $('#errorMD').modal('show');
+        },1000);
+        
+        //alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
+    },
+    timeout: 15000
+    });
+}
+</script><button class="btn btn-danger btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="noAprobarBTN" type="button" style=";margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
+    onclick="noAprobarTrabajo()">No Aprobar</button>
+
+<script type="text/javascript">
+
+function noAprobarTrabajo() {
+    /*var repo = 0;
+    var obs = $('#observacionTA').val();
+    var idps = $('#idpsText').val();
+    if($('#aprobarCHK').is(':checked'))
+      repo = 1;
+    $.ajax({
+      type: "POST",
+      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      data: { repositorio : repo, observacion : obs},
+      success: function(data){
+        alert('Has aprobado el trabajo de grado con ID: '+idps);
+        $("#aprobarBTN").hide();
+        $("#checkField").hide();
+    },
+    error: function(data){
+        alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
+    },
+    timeout: 15000
+    });*/
+}
+</script></div>
+        <div class="text-center"><button class="btn btn-primary d-none btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="pazysalvoBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Descarga el documento de paz y salvo."
+    onclick="descargarPS();">Descargar Paz y Salvo</button>
+
+<script type="text/javascript">
+
+function descargarPS() {
+    var idps = $('#idpsText').val();   window.open('http://api.sibudelas.local/pazysalvo/documento/'+idps+'/'+Cookies.get('session_token'));
+    
+}
+//$(document).ready(aprobarTrabajo);
+</script></div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="guardandoMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Guardando Datos&nbsp; <i class="fas fa-spinner fas fa-circle-notch fa-spin"></i>&nbsp;</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los datos se están guardando&nbsp;</p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="correctoMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Operación Correcta</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Se ha guardado correctamente los datos</p><i class="fa fa-check" style="font-size: 63px;color: var(--success);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="errorMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Algo a salido mal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Al parecer no pudimos completar su petición.</p><i class="fa fa-warning" style="font-size: 63px;color: var(--orange);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/script.min.js"></script>
+    <script src="../../../assets/js/login/redir-session.min.js"></script>
+    <script src="../../../assets/js/mainApp.min.js"></script>
+    <script src="../../../assets/js/trabajogrado/loadData.min.js"></script>
+</body>
+
+</html>

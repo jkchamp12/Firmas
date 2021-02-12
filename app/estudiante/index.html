@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sibudelas Centralizado</title>
+    <meta name="twitter:title" content="Sibudelas Centralizado - UDELAS">
+    <meta property="og:type" content="website">
+    <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
+    <meta property="og:image" content="../../../assets/img/leer2.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,greek-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="../../../../assets/js/api/API.min.js"></script>
+</head>
+
+<body style="margin-top: 4em;">
+    <div class="main-leftsidebar-div" data-component="leftsidebar">
+        <div class="leftsidebar">
+            <ul class="nav list-group flex-column d-inline-block first-menu scrollbar-indigo thin first-main-menu">
+                <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="/app/" style="color: rgb(74,82,108);"><i class="fa fa-dashboard"><span class="ml-2 align-middle" href="#">Panel de Control</span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-book"><span class="ml-2 align-middle" href="#">Trabajo de Grado</span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes">Pendientes</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes/estudiantes">Trámites Detenidos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="ps-especial"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="far fa-bookmark"><span class="ml-2 align-middle" href="#">Paz y Salvo Especiales</span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/especiales/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/ver">Verificar Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3 d-none"><a class="nav-link" href="/app/ps/especiales/pendientes">Pendientes</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/pendientes/estudiantes">Trámites Detenidos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="morosidadNav"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-money"><span class="ml-2 align-middle" href="#">Morosidades
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/morosidades/nueva">Crear Nueva</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/morosidades/ver">Ver Todas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="pagosNav"><a class="nav-link" style="color: rgb(74,82,108);"><i class="fa fa-credit-card"><span class="ml-2 align-middle" href="#">Pagos
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/pagos">Ver Todos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-bell"><span class="ml-2 align-middle" href="#">Notificaciones <span id="notifications" class="badge badge-danger badge-counter" style="font-size: 10px;margin-left: 7px;">0</span>
+    </span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="estadisticasNav"><a class="nav-link" href="/app/estadisticas" style="color: rgb(74,82,108);"><i class="fa fa-pie-chart"><span class="ml-2 align-middle" href="#">Estadísticas
+    </span></i></a></li>
+                <li class="nav-item list-group-item pl-1 py-2 d-none" id="usuariosNav"><a class="nav-link" style="color: rgb(74,82,108);"><i id='usuariosLAT' class="fa fa-users"><span class="ml-2 align-middle" href="#">Usuarios
+    </span></i></a>
+                    <ul class="nav list-group flex-column d-inline-block submenu">
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" href="/app/usuarios">Ver Todos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white" style="font-family: 'Open Sans', sans-serif;margin-bottom: 3em;">
+        <div class="container-fluid"><a href="#"><img src="../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
+                <ul class="nav navbar-nav ml-auto" id="items-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">¿QUIÉNES SOMOS?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">NOTICIAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">MANUAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACTO</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+            <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">MI CUENTA</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="/app/usuario">Ver Más</a><a class="dropdown-item" href="/app/login">Salir</a></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-left: 5em;">
+        <div class="row">
+            <div class="col-md-12 alert-col relative">
+                <div class="alert alert-info absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
+            </div>
+        </div>
+        <form>
+            <div class="form-row profile-row">
+                <div class="col-md-4 relative">
+                    <div class="avatar">
+                        <div class="avatar-bg center"></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1>Perfil de Estudiante</h1>
+                    <hr>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group"><label style="font-size: 20px;">Nombre</label></div><span id="nombreSP" class="badge-secondary" style="font-size: 20px;"></span>
+                        </div>
+                        <div class="col">
+                            <div class="form-group"><label style="font-size: 20px;">Cédula</label></div><span id="cedulaSP" class="badge-secondary" style="font-size: 20px;"></span>
+                        </div>
+                    </div>
+                    <div class="form-row" style="margin-top: 1em;">
+                        <div class="col">
+                            <div class="form-group"><label style="font-size: 20px;">Email</label></div><span id="correoSP" class="badge-secondary" style="font-size: 20px;"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><label style="font-size: 20px;">Tipo</label></div><span id="tipoSP" class="badge-secondary" style="font-size: 20px;"></span>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group" style="font-size: 20px;"><label>Sede</label></div><span id="sedeSP" class="badge-secondary" style="font-size: 20px;"></span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-row" style="margin-top: 1em;">
+                        <div class="col">
+                            <div class="form-group"><label id="deudaLabel" class="d-none" style="font-size: 20px;">Deudas</label></div>
+                            <div class="table-responsive d-none" id="tabla-deudas">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>MONTO</th>
+                                            <th>VER MÁS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-deudas-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
+    <script src="../../assets/js/script.min.js"></script>
+    <script src="../../assets/js/estudiantes/individual.min.js"></script>
+    <script src="../../assets/js/login/redir-session.min.js"></script>
+    <script src="../../assets/js/mainApp.min.js"></script>
+</body>
+
+</html>
