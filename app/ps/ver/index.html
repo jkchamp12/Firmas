@@ -8,7 +8,7 @@
     <meta name="twitter:title" content="Sibudelas Centralizado - UDELAS">
     <meta property="og:type" content="website">
     <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
-    <meta property="og:image" content="../../../assets/img/leer2.svg">
+    <meta property="og:image" content="https://sibudelas.udelas.ac.pa/assets/img/leer2.svg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicon-32x32.png">
@@ -52,14 +52,14 @@
                 <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="/app/" style="color: rgb(74,82,108);"><i class="fa fa-dashboard"><span class="ml-2 align-middle" href="#">Panel de Control</span></i></a></li>
                 <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-book"><span class="ml-2 align-middle" href="#">Trabajo de Grado</span></i></a>
                     <ul class="nav list-group flex-column d-inline-block submenu">
-                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bss-tooltip="" href="/app/ps/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
                         <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes">Pendientes</a></li>
                         <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes/estudiantes">Trámites Detenidos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item list-group-item pl-1 py-2 d-none" id="ps-especial"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="far fa-bookmark"><span class="ml-2 align-middle" href="#">Paz y Salvo Especiales</span></i></a>
                     <ul class="nav list-group flex-column d-inline-block submenu">
-                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="/app/ps/especiales/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
+                        <li class="nav-item list-group-item pl-3"><a class="nav-link active" data-toggle="tooltip" data-bss-tooltip="" href="/app/ps/especiales/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
                         <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/ver">Verificar Solicitud</a></li>
                         <li class="nav-item list-group-item pl-3 d-none"><a class="nav-link" href="/app/ps/especiales/pendientes">Pendientes</a></li>
                         <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/especiales/pendientes/estudiantes">Trámites Detenidos</a></li>
@@ -94,7 +94,7 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white" style="font-family: 'Open Sans', sans-serif;margin-bottom: 3em;">
         <div class="container-fluid"><a href="#"><img src="../../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
-                <ul class="nav navbar-nav ml-auto" id="items-nav">
+                <ul class="navbar-nav ml-auto" id="items-nav">
                     <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
                     <li class="nav-item"><a class="nav-link" href="/nosotros">¿QUIÉNES SOMOS?</a></li>
                     <li class="nav-item"><a class="nav-link" href="#noticias">NOTICIAS</a></li>
@@ -103,7 +103,7 @@
                     <li class="nav-item"></li>
                 </ul>
             </div>
-            <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">MI CUENTA</a>
+            <div class="dropdown"><a class="dropdown-toggle" aria-expanded="false" data-toggle="dropdown" href="#">MI CUENTA</a>
                 <div class="dropdown-menu"><a class="dropdown-item" href="/app/usuario">Ver Más</a><a class="dropdown-item" href="/app/login">Salir</a></div>
             </div>
         </div>
@@ -191,134 +191,350 @@
                 </tbody>
             </table>
         </div>
-        <form id="form-test" class="d-none">
+        <form id="rubrica-tcualitativa" class="d-none">
             <div class="form-group" id="aspecto-forma-tcualitativa">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Criterio</th>
-                                <th>Evaluación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Márgenes correctos<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="margens-2" value="Cumple" name="margens"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="margenn-2" value="No Cumple" name="margens" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Hoja de presentación acorde con el manual<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="margens-3" value="Cumple" name="h-presentacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="margenn-3" value="No Cumple" name="h-presentacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1.5 de interlineado<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-1" value="Cumple" name="interlineado1-5"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-2" value="No Cumple" name="interlineado1-5" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Título de al menos 15 palabras<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-1" value="Cumple" name="titulo-15palabras"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-2" value="No Cumple" name="titulo-15palabras" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Contenido General<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-1" value="Cumple" name="contenido-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-2" value="No Cumple" name="contenido-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Hoja de separación de capítulo<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="hoja-separacion-1" value="Cumple" name="hoja-separacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-3" value="No Cumple" name="hoja-separacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Letra arial 12&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Encabezado de los capítulos en letra arial 12, sin puntuación al final "></i>&nbsp;</td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-1" value="Cumple" name="letra-arial12"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-2" value="No Cumple" name="letra-arial12" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Sin sangría en los párrafos<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-1" value="Cumple" name="sangria-parrafo"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-2" value="No Cumple" name="sangria-parrafo" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Los índices al final del documento<br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-1" value="Cumple" name="indices-final"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-3" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Logo correcto <i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="(2cm. x 4.5cm)"></i><br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="logo-correcto-1" value="Cumple" name="logo-correcto"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-4" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Paginación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="(páginas preliminares:  abarca desde la portada hasta la separata de capítulo I, estas se cuentan pero no se enumeran) -  Las páginas de separatas ninguna lleva numeración, pero se cuentan. Los anexos no se enumeran, pero llevan la hoja de separata individual. "></i><br></td>
-                                <td>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="paginacionC-1" value="Cumple" name="paginacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="radio" id="paginacionI-1" value="No Cumple" name="paginacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Generales</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">Aspectos de forma<br></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Capítulo 1</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4">Capítulo 2</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5">Capítulo 3</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-6">Capítulo 4</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-7">Aspectos Finales</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" role="tabpanel" id="tab-1">
+                            <div class="table-responsive" id="generales">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Resumen&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En este apartado se hace una breve presentación del trabajo que permita visualizar sintéticamente su contenido. Al finalizar una investigación se debe describir lo más importante de la misma, mínimo 150 palabras, máximo 250 palabras; incluyendo: primer párrafo (título, objetivos de la investigación descritos como propósitos, segundo párrafo diseño y tipo de estudio,  tercer párrafo resultados y conclusiones."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenC" value="Cumple" name="resumen"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenN" value="No Cumple" name="resumen" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Palabras claves&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Incluir al menos 5 a 7 palabras o conceptos claves del trabajo de investigación. Se colocarán en tamaño N°10 Arial, negrita. "></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC" value="Cumple" name="palabras-claves"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN" value="No Cumple" name="palabras-claves" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abstract&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Traducir al idioma inglés el resumen.  Se colocarán las keywords en tamaño N°10 Arial, negrita"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC-1" value="Cumple" name="abstract"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN-1" value="No Cumple" name="abstract" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Introducción&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Una breve descripción del tema como parte de la introducción, en donde se oriente al lector y se describa utilizando una redacción clara, lo que va a contener cada capítulo.  Se redacta al terminar la tesis."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC" value="Cumple" name="introduccion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI" value="No Cumple" name="introduccion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" role="tabpanel" id="tab-2">
+                            <div class="table-responsive" id="aspectos-forma">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Márgenes correctos<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margens-2" value="Cumple" name="margens"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margenn-2" value="No Cumple" name="margens" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoja de presentación acorde con el manual<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margens-3" value="Cumple" name="h-presentacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margenn-3" value="No Cumple" name="h-presentacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1.5 de interlineado<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-1" value="Cumple" name="interlineado1-5"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-2" value="No Cumple" name="interlineado1-5" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Título de al menos 15 palabras<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-1" value="Cumple" name="titulo-15palabras"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-2" value="No Cumple" name="titulo-15palabras" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contenido General<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-1" value="Cumple" name="contenido-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-2" value="No Cumple" name="contenido-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoja de separación de capítulo<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="hoja-separacion-1" value="Cumple" name="hoja-separacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-3" value="No Cumple" name="hoja-separacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Letra arial 12&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Encabezado de los capítulos en letra arial 12, sin puntuación al final "></i>&nbsp;</td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-1" value="Cumple" name="letra-arial12"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-2" value="No Cumple" name="letra-arial12" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sin sangría en los párrafos<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-1" value="Cumple" name="sangria-parrafo"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-2" value="No Cumple" name="sangria-parrafo" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Los índices al final del documento<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-1" value="Cumple" name="indices-final"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-3" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Logo correcto <i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="(2cm. x 4.5cm)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="logo-correcto-1" value="Cumple" name="logo-correcto"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-4" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paginación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="(páginas preliminares:  abarca desde la portada hasta la separata de capítulo I, estas se cuentan pero no se enumeran) -  Las páginas de separatas ninguna lleva numeración, pero se cuentan. Los anexos no se enumeran, pero llevan la hoja de separata individual. "></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="paginacionC-1" value="Cumple" name="paginacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="paginacionI-1" value="No Cumple" name="paginacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-3">
+                            <div class="table-responsive" id="cap-1">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo I - Enunciado&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="El enunciado del capítulo en arial 26, negrita,  centrado y en cierre de mayúscula"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC" value="Cumple" name="cap1-enunciado"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI" value="No Cumple" name="cap1-enunciado" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Planteamiento del Problema&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Plantea y delimita el problema, detallando los antecedentes teóricos de la investigación, es decir, describe algunos aspectos generales de investigaciones precedentes relevantes para la investigación así como, la situación actual del problema a resolver, información que no necesariamente esta publicada en revistas científicas indexadas, puede encontrarse en estadísticas nacionales e internacionales, o periódicos y revistas de divulgación general.  Los autores e investigaciones utilizadas deben estar descritos en las referencias bibliográficas del estudio, de acuerdo con las normas de la (APA)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-1" value="Cumple" name="cap1-planteamiento"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-1" value="No Cumple" name="cap1-planteamiento" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I - Problema de investigación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Plantea en una o varias preguntas de investigación. Es afinar y estructurar de manera formal la idea de investigación. La redacción debe ser clara y sin ambigüedades."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-1" value="Cumple" name="cap1-problema-investigacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-1" value="No Cumple" name="cap1-problema-investigacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Justificación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="-Se analiza la importancia o relevancia del problema a resolver, con base en las necesidades o características observadas en el contexto real - en la redacción se deben describe los beneficiarios y aportes, apoyando la descripción en los antecedentes teóricos descritos y en la situación actual del país o entorno inmediato en el que(donde) se realice la investigación.  -Debe ser un escrito claro y preciso, donde no hay subapartados, sino una integración de los puntos que justifican una investigación. Son argumentos que sustenten la investigación. - Usa fuentes de respaldo normadas en APA"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-2" value="Cumple" name="cap1-justificacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-2" value="No Cumple" name="cap1-justificacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Objetivo general <i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Es la parte donde se expresan lo que quiere lograr con la investigación. Expresan los resultados que se pretenden alcanzar al finalizar el estudio. La característica más importante es que sean  -Ser factibles y mensurables (Rojas, 1980). Su importancia radica en que sirve para  -indican la dirección de la investigación y como son enunciados que expresan una acción, a llevar a cabo, deben iniciarse por verbos que indican acciones a realizar. Los verbos deben - Son escritos en  verbo infinitivo (ar, er, ir). - Señalan en qué, en quienes y dónde se llevará a cabo el estudio"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-2" value="Cumple" name="cap1-objetivo-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-2" value="No Cumple" name="cap1-objetivo-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Objetivos específicos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Permiten  -establecen las diferentes acciones que se van a realizar en el desarrollo del estudio.  -Se desprenden del objetivo general para resolverlo o darle cumplimiento. También son enunciados que  -expresan acción por lo que deben iniciarse con verbos, los cuales deben ser descritos en infinitivo (ar, er, ir)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-3" value="Cumple" name="cap1-objetivos-especificos"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-3" value="No Cumple" name="cap1-objetivos-especificos" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Tipo de estudio&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Dependen de las características de la investigación.  -Se define con base en el problema objeto y determinan el análisis de los datos y el alcance de los resultados (Leyva, 2008)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-3" value="Cumple" name="cap1-tipo-estudio"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-3" value="No Cumple" name="cap1-tipo-estudio" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-4">
+                            <div class="table-responsive" id="cap-2">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo II&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Separata"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-4" value="Cumple" name="cap2-separata"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-4" value="No Cumple" name="cap2-separata" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo II -&nbsp;Marco Teórico&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="-Está conformado tanto por los conceptos, como por las investigaciones (referencias) que fundamentan el proceso. - Es la exposición y análisis de la teoría o grupo de teorías que sirven como fundamento para explicar los antecedentes e interpretar los resultados de una investigación.  Debe ser elaborado de  acuerdo con los temas principales de la investigación (variables),y el desarrollo de estos sea Redacción clara, concisa y precisa. De forma que, se le facilite la comprensión de las bases teóricas de la investigación propuesta. -Se debe citar las fuentes según normas APA -Evitar el abuso de citas textuales sin comentario propio o párrafos enteros sin citar  -Utiliza tablas, figuras sin mencionar la fuente La bibliografía debe ser actualizada. Apoyarse en datos confiables, revistas indexadas e información válida y confiable. Las citas deben ser redactadas de acuerdo con las normas APA. Los textos deben ser actuales (máximo 10 años)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-4" value="Cumple" name="cap2-marco-teorico"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-4" value="No Cumple" name="cap2-marco-teorico" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-5">
+                            <div class="table-responsive" id="cap-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo III&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Separata"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-5" value="Cumple" name="cap3-separata"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-5" value="No Cumple" name="cap3-separata" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase I&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Escenario: Descripción de la situación social en la cual se integran las personas que participan en el estudio, sus interacciones, las normas, y todos aquellos aspectos que sean relevantes para el estudio. Población: es el universo de individuos, objetos o eventos que se pretende estudiar de acuerdo con el problema de investigación. Puede definirse considerando sus características generales y particulares. La población objeto es muy numerosa por lo que se obtiene una muestra representativa a la que llamamos sujetos.  Participantes: es un subconjunto de la población elegida estadísticamente. Se describen las características puntales del grupo estudio o experimental, detallando los criterios de inclusión o exclusión, esto último puede ser literal o describirse en una redacción general junto con las características del grupo a estudiar.  Tipo de muestra: conjunto de operaciones estadísticas que se realizan para elegir de la población delimitada los sujetos de una investigación, utilizando un método estadístico de muestreo. Existen muchos tipos de muestras. Hay que elegir la más adecuada de acuerdo con las características de la investigación."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-5" value="Cumple" name="cap3-fase1"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-5" value="No Cumple" name="cap3-fase1" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase II&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Variables o aspectos para medir: son los conceptos para evaluar, manipular o modificar para resolver el problema. Se debe describir así:  Definición conceptual: descripción teórica. Definición operacional: cómo se va  a medir la variable.  En los estudios cualitativos, pueden aumentarse o modificarse las variables durante el desarrollo de la investigación, hay flexibilidad en este punto, pues al estar trabajando en el escenario, pueden aparecer aspectos que deben ser medidos, que no fueron contemplados en un inicio."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-6" value="Cumple" name="cap3-fase2"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-6" value="No Cumple" name="cap3-fase2" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase III&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Son los recursos o herramientas utilizadas por el investigador para obtener los datos necesarios para resolver el problema de investigación. Mecanismos usados por el investigador para recolectar y registrar la información; formularios, pruebas, test, escalas de opinión, listas de chequeo, entre otros. Pueden ser inéditos elaborados y validados específicamente para la investigación."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-6" value="Cumple" name="cap3-fase3"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-6" value="No Cumple" name="cap3-fase3" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase IV&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Descripción de lo realizado para lograr los resultados de la investigación.  Las fases de intervención o descripción del proceso a realizar para solucionar el problema de investigación.  Debe ser puntual, claro y detallado, para que sea útil y eficiente para que otros investigadores puedan aplicar un estudio similar o sea utilizado como fundamento para investigaciones posteriores."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-7" value="Cumple" name="cap3-fase4"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-7" value="No Cumple" name="cap3-fase4" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-6">
+                            <div class="table-responsive" id="cap-4">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo IV - Propuesta de&nbsp;<br>intervención&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="La propuesta está compuesta por todos aquellos elementos que describen la es-tructura de la intervención. (descripción, área de intervención o líneas de acción, introducción, justificación, objetivos, desarrollo de la propuesta, método /procedi-miento, talleres, terapias, componentes académicos, instrumentos, material didác¬tico, lo que implique la intervención) * la estructura depende de la propuesta. Si la propuesta no va a ser validada o no hay propuesta entonces va en anexos y el capitulo V seria el análisis y discusión de resultados."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-7" value="Cumple" name="cap4-propuesta-intervancion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-7" value="No Cumple" name="cap4-propuesta-intervancion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo IV - Análisis y discusión de resultados&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Es la interpretación de los datos mediante un lenguaje claro. Se describen los criterios en que se organizaran los resultados y se procesó a ir analizando con el mayor detalle posible."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-8" value="Cumple" name="cap4-analisis-resultados"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-8" value="No Cumple" name="cap4-analisis-resultados" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-7">
+                            <div class="table-responsive" id="finales">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Conclusiones&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Se exponen los hallazgos y se relacionan con los objetivos propuestos. Se analiza, interpreta y evalúan los resultados y se extraen inferencias de ellos, que relacionas con la teoría que sustenta tu marco teórico."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-8" value="Cumple" name="conclusiones"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-8" value="No Cumple" name="conclusiones" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Limitaciones y sugerencias de la investigación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Se describen de forma puntual las limitaciones de la investigación y las sugerencias para próximas investigaciones."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-9" value="Cumple" name="limitaciones-sugerencias"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-9" value="No Cumple" name="limitaciones-sugerencias" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Referencias Bibliográficas e Infografía&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En esta sección se deben colocar las referencias bibliográficas. Se deben considerar también la infografía, producto de revistas electrónicas u otros documentos de internet. Utilizando las normas APA. Se colocarán en orden alfabético por apellido.(Ajustarse a la pag. 55 del manual para corregir este apartado)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-9" value="Cumple" name="referencias-infografia"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-9" value="No Cumple" name="referencias-infografia" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anexos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En este apartado se incorporan los materiales necesarios para complementar el proyecto. Cada anexo se colocará por separado; abriendo una página que anuncie el título del anexo, en letra arial 26 en el centro de la página."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-10" value="Cumple" name="anexos"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-10" value="No Cumple" name="anexos" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Índices de Cuadros, Gráficas, Figuras, Fotos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Constituyen lo último que debe aparecer en su proyecto de investigación"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-10" value="Cumple" name="indices-cuadros-etc"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-10" value="No Cumple" name="indices-cuadros-etc" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Resumen&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="En este apartado se hace una breve presentación del trabajo que permita visualizar sintéticamente su contenido. Al finalizar una investigación se debe describir lo más importante de la misma, mínimo 150 palabras, máximo 250 palabras; incluyendo: primer párrafo (título, objetivos de la investigación descritos como propósitos, segundo párrafo diseño y tipo de estudio,  tercer párrafo resultados y conclusiones."></i><br></td>
-                            <td>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenC" value="Cumple" name="resumen"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenN" value="No Cumple" name="resumen" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Palabras claves&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Incluir al menos 5 a 7 palabras o conceptos claves del trabajo de investigación. Se colocarán en tamaño N°10 Arial, negrita. "></i><br></td>
-                            <td>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC" value="Cumple" name="palabras-claves"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN" value="No Cumple" name="palabras-claves" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Abstract&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Traducir al idioma inglés el resumen.  Se colocarán las keywords en tamaño N°10 Arial, negrita"></i><br></td>
-                            <td>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC-1" value="Cumple" name="abstract"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN-1" value="No Cumple" name="abstract" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Introducción&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" title="Una breve descripción del tema como parte de la introducción, en donde se oriente al lector y se describa utilizando una redacción clara, lo que va a contener cada capítulo.  Se redacta al terminar la tesis."></i><br></td>
-                            <td>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC" value="Cumple" name="introduccion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
-                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI" value="No Cumple" name="introduccion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
             <div class="text-right"><button class="btn btn-primary btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="rubricaBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
     onclick="guardarRubrica()">Aprobar</button>
@@ -326,7 +542,391 @@
 <script type="text/javascript">
 
 function guardarRubrica() {
-    var formData = $("#form-test");
+    var formData = $("#rubrica-tcualitativa");
+    var data = getFormData(formData);
+    alert(JSON.stringify(data));
+   /* $.ajax({
+      type: "POST",
+      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      data: { repositorio : repo, observacion : obs},
+      success: function(data){
+        $('#guardandoMD').modal('hide');
+        $("#aprobarBTN").hide();
+        $("#noAprobarBTN").hide();
+        $("#checkField").hide();
+    },
+    error: function(data){
+        alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
+    },
+    timeout: 15000
+    });*/
+}
+    
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
+    
+</script></div>
+        </form>
+        <form id="rubrica-tcuantitativa" class="d-none">
+            <div class="form-group" id="aspecto-forma-tcualitativa">
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-8">Generales</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-9">Aspectos de forma<br></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-10">Capítulo 1</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-11">Capítulo 2</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-12">Capítulo 3</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-13">Capítulo 4</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-14">Aspectos Finales</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="tab-8">
+                            <div class="table-responsive" id="generales">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Resumen&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En este apartado se hace una breve presentación del trabajo que permita visualizar sintéticamente su contenido. Al finalizar una investigación se debe describir lo más importante de la misma, mínimo 150 palabras, máximo 250 palabras; incluyendo: primer párrafo (título, objetivos de la investigación descritos como propósitos, segundo párrafo diseño y tipo de estudio,  tercer párrafo resultados y conclusiones."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenC" value="Cumple" name="resumen"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="resumenN" value="No Cumple" name="resumen" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Palabras claves&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Incluir al menos 5 a 7 palabras o conceptos claves del trabajo de investigación. Se colocarán en tamaño N°10 Arial, negrita. "></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC" value="Cumple" name="palabras-claves"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN" value="No Cumple" name="palabras-claves" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abstract&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Traducir al idioma inglés el resumen.  Se colocarán las keywords en tamaño N°10 Arial, negrita"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesC-1" value="Cumple" name="abstract"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="palabras-clavesN-1" value="No Cumple" name="abstract" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Introducción&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Una breve descripción del tema como parte de la introducción, en donde se oriente al lector y se describa utilizando una redacción clara, lo que va a contener cada capítulo.  Se redacta al terminar la tesis."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-11" value="Cumple" name="introduccion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-11" value="No Cumple" name="introduccion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-9">
+                            <div class="table-responsive" id="aspectos-forma">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Márgenes correctos<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margens-2" value="Cumple" name="margens"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margenn-2" value="No Cumple" name="margens" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoja de presentación acorde con el manual<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margens-3" value="Cumple" name="h-presentacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="margenn-3" value="No Cumple" name="h-presentacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1.5 de interlineado<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-1" value="Cumple" name="interlineado1-5"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="interlineado1-2" value="No Cumple" name="interlineado1-5" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Título de al menos 15 palabras<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-1" value="Cumple" name="titulo-15palabras"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="titulo-15palabras-2" value="No Cumple" name="titulo-15palabras" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contenido General<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-1" value="Cumple" name="contenido-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-2" value="No Cumple" name="contenido-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoja de separación de capítulo<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="hoja-separacion-1" value="Cumple" name="hoja-separacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="contenido-general-3" value="No Cumple" name="hoja-separacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Letra arial 12&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Encabezado de los capítulos en letra arial 12, sin puntuación al final "></i>&nbsp;</td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-1" value="Cumple" name="letra-arial12"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="letra-arial-2" value="No Cumple" name="letra-arial12" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sin sangría en los párrafos<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-1" value="Cumple" name="sangria-parrafo"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="sangria-parrafo-2" value="No Cumple" name="sangria-parrafo" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Los índices al final del documento<br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-1" value="Cumple" name="indices-final"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-3" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Logo correcto <i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="(2cm. x 4.5cm)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="logo-correcto-1" value="Cumple" name="logo-correcto"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="indices-final-4" value="No Cumple" name="indices-final" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paginación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="(páginas preliminares:  abarca desde la portada hasta la separata de capítulo I, estas se cuentan pero no se enumeran) -  Las páginas de separatas ninguna lleva numeración, pero se cuentan. Los anexos no se enumeran, pero llevan la hoja de separata individual. "></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="paginacionC-1" value="Cumple" name="paginacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="paginacionI-1" value="No Cumple" name="paginacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-10">
+                            <div class="table-responsive" id="cap-1">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo I - Enunciado&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="El enunciado del capítulo en arial 26, negrita,  centrado y en cierre de mayúscula"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-12" value="Cumple" name="cap1-enunciado"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-12" value="No Cumple" name="cap1-enunciado" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Planteamiento del Problema&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Plantea y delimita el problema, detallando los antecedentes teóricos de la investigación, es decir, describe algunos aspectos generales de investigaciones precedentes relevantes para la investigación así como, la situación actual del problema a resolver, información que no necesariamente esta publicada en revistas científicas indexadas, puede encontrarse en estadísticas nacionales e internacionales, o periódicos y revistas de divulgación general.  Los autores e investigaciones utilizadas deben estar descritos en las referencias bibliográficas del estudio, de acuerdo con las normas de la (APA)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-13" value="Cumple" name="cap1-planteamiento"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-13" value="No Cumple" name="cap1-planteamiento" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I - Problema de investigación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Plantea en una o varias preguntas de investigación. Es afinar y estructurar de manera formal la idea de investigación. La redacción debe ser clara y sin ambigüedades."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-14" value="Cumple" name="cap1-problema-investigacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-14" value="No Cumple" name="cap1-problema-investigacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Justificación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="-Se analiza la importancia o relevancia del problema a resolver, con base en las necesidades o características observadas en el contexto real - en la redacción se deben describe los beneficiarios y aportes, apoyando la descripción en los antecedentes teóricos descritos y en la situación actual del país o entorno inmediato en el que(donde) se realice la investigación.  -Debe ser un escrito claro y preciso, donde no hay subapartados, sino una integración de los puntos que justifican una investigación. Son argumentos que sustenten la investigación. - Usa fuentes de respaldo normadas en APA"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-15" value="Cumple" name="cap1-justificacion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-15" value="No Cumple" name="cap1-justificacion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Objetivo general <i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Es la parte donde se expresan lo que quiere lograr con la investigación. Expresan los resultados que se pretenden alcanzar al finalizar el estudio. La característica más importante es que sean  -Ser factibles y mensurables (Rojas, 1980). Su importancia radica en que sirve para  -indican la dirección de la investigación y como son enunciados que expresan una acción, a llevar a cabo, deben iniciarse por verbos que indican acciones a realizar. Los verbos deben - Son escritos en  verbo infinitivo (ar, er, ir). - Señalan en qué, en quienes y dónde se llevará a cabo el estudio"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-16" value="Cumple" name="cap1-objetivo-general"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-16" value="No Cumple" name="cap1-objetivo-general" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Objetivos específicos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Permiten  -establecen las diferentes acciones que se van a realizar en el desarrollo del estudio.  -Se desprenden del objetivo general para resolverlo o darle cumplimiento. También son enunciados que  -expresan acción por lo que deben iniciarse con verbos, los cuales deben ser descritos en infinitivo (ar, er, ir)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-17" value="Cumple" name="cap1-objetivos-especificos"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-17" value="No Cumple" name="cap1-objetivos-especificos" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo I -&nbsp;Tipo de estudio&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Dependen de las características de la investigación.  -Se define con base en el problema objeto y determinan el análisis de los datos y el alcance de los resultados (Leyva, 2008)."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-18" value="Cumple" name="cap1-tipo-estudio"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-18" value="No Cumple" name="cap1-tipo-estudio" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-11">
+                            <div class="table-responsive" id="cap-2">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo II&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Separata"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-19" value="Cumple" name="cap2-separata"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-19" value="No Cumple" name="cap2-separata" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo II -&nbsp;Marco Teórico&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="-Está conformado tanto por los conceptos, como por las investigaciones (referencias) que fundamentan el proceso. - Es la exposición y análisis de la teoría o grupo de teorías que sirven como fundamento para explicar los antecedentes e interpretar los resultados de una investigación.  Debe ser elaborado de  acuerdo con los temas principales de la investigación (variables),y el desarrollo de estos sea Redacción clara, concisa y precisa. De forma que, se le facilite la comprensión de las bases teóricas de la investigación propuesta. -Se debe citar las fuentes según normas APA -Evitar el abuso de citas textuales sin comentario propio o párrafos enteros sin citar  -Utiliza tablas, figuras sin mencionar la fuente La bibliografía debe ser actualizada. Apoyarse en datos confiables, revistas indexadas e información válida y confiable. Las citas deben ser redactadas de acuerdo con las normas APA. Los textos deben ser actuales (máximo 10 años)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-20" value="Cumple" name="cap2-marco-teorico"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-20" value="No Cumple" name="cap2-marco-teorico" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-12">
+                            <div class="table-responsive" id="cap-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo III&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Separata"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-21" value="Cumple" name="cap3-separata"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-21" value="No Cumple" name="cap3-separata" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase I&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Escenario: Descripción de la situación social en la cual se integran las personas que participan en el estudio, sus interacciones, las normas, y todos aquellos aspectos que sean relevantes para el estudio. Población: es el universo de individuos, objetos o eventos que se pretende estudiar de acuerdo con el problema de investigación. Puede definirse considerando sus características generales y particulares. La población objeto es muy numerosa por lo que se obtiene una muestra representativa a la que llamamos sujetos.  Participantes: es un subconjunto de la población elegida estadísticamente. Se describen las características puntales del grupo estudio o experimental, detallando los criterios de inclusión o exclusión, esto último puede ser literal o describirse en una redacción general junto con las características del grupo a estudiar.  Tipo de muestra: conjunto de operaciones estadísticas que se realizan para elegir de la población delimitada los sujetos de una investigación, utilizando un método estadístico de muestreo. Existen muchos tipos de muestras. Hay que elegir la más adecuada de acuerdo con las características de la investigación."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-22" value="Cumple" name="cap3-fase1"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-22" value="No Cumple" name="cap3-fase1" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase II&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Variables o aspectos para medir: son los conceptos para evaluar, manipular o modificar para resolver el problema. Se debe describir así:  Definición conceptual: descripción teórica. Definición operacional: cómo se va  a medir la variable.  En los estudios cualitativos, pueden aumentarse o modificarse las variables durante el desarrollo de la investigación, hay flexibilidad en este punto, pues al estar trabajando en el escenario, pueden aparecer aspectos que deben ser medidos, que no fueron contemplados en un inicio."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-23" value="Cumple" name="cap3-fase2"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-23" value="No Cumple" name="cap3-fase2" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase III&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Son los recursos o herramientas utilizadas por el investigador para obtener los datos necesarios para resolver el problema de investigación. Mecanismos usados por el investigador para recolectar y registrar la información; formularios, pruebas, test, escalas de opinión, listas de chequeo, entre otros. Pueden ser inéditos elaborados y validados específicamente para la investigación."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-24" value="Cumple" name="cap3-fase3"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-24" value="No Cumple" name="cap3-fase3" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo III - Fase IV&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Descripción de lo realizado para lograr los resultados de la investigación.  Las fases de intervención o descripción del proceso a realizar para solucionar el problema de investigación.  Debe ser puntual, claro y detallado, para que sea útil y eficiente para que otros investigadores puedan aplicar un estudio similar o sea utilizado como fundamento para investigaciones posteriores."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-25" value="Cumple" name="cap3-fase4"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-25" value="No Cumple" name="cap3-fase4" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-13">
+                            <div class="table-responsive" id="cap-4">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Capítulo IV - Propuesta de&nbsp;<br>intervención&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="La propuesta está compuesta por todos aquellos elementos que describen la es-tructura de la intervención. (descripción, área de intervención o líneas de acción, introducción, justificación, objetivos, desarrollo de la propuesta, método /procedi-miento, talleres, terapias, componentes académicos, instrumentos, material didác¬tico, lo que implique la intervención) * la estructura depende de la propuesta. Si la propuesta no va a ser validada o no hay propuesta entonces va en anexos y el capitulo V seria el análisis y discusión de resultados."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-26" value="Cumple" name="cap4-propuesta-intervancion"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-26" value="No Cumple" name="cap4-propuesta-intervancion" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capítulo IV - Análisis y discusión de resultados&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Es la interpretación de los datos mediante un lenguaje claro. Se describen los criterios en que se organizaran los resultados y se procesó a ir analizando con el mayor detalle posible."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-27" value="Cumple" name="cap4-analisis-resultados"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-27" value="No Cumple" name="cap4-analisis-resultados" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-14">
+                            <div class="table-responsive" id="finales">
+                                <table class="table">
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Conclusiones&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Se exponen los hallazgos y se relacionan con los objetivos propuestos. Se analiza, interpreta y evalúan los resultados y se extraen inferencias de ellos, que relacionas con la teoría que sustenta tu marco teórico."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-28" value="Cumple" name="conclusiones"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-28" value="No Cumple" name="conclusiones" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Limitaciones y sugerencias de la investigación&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Se describen de forma puntual las limitaciones de la investigación y las sugerencias para próximas investigaciones."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-29" value="Cumple" name="limitaciones-sugerencias"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-29" value="No Cumple" name="limitaciones-sugerencias" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Referencias Bibliográficas e Infografía&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En esta sección se deben colocar las referencias bibliográficas. Se deben considerar también la infografía, producto de revistas electrónicas u otros documentos de internet. Utilizando las normas APA. Se colocarán en orden alfabético por apellido.(Ajustarse a la pag. 55 del manual para corregir este apartado)"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-30" value="Cumple" name="referencias-infografia"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-30" value="No Cumple" name="referencias-infografia" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anexos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="En este apartado se incorporan los materiales necesarios para complementar el proyecto. Cada anexo se colocará por separado; abriendo una página que anuncie el título del anexo, en letra arial 26 en el centro de la página."></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-31" value="Cumple" name="anexos"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-31" value="No Cumple" name="anexos" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Índices de Cuadros, Gráficas, Figuras, Fotos&nbsp;<i class="fa fa-question-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="right" title="Constituyen lo último que debe aparecer en su proyecto de investigación"></i><br></td>
+                                            <td>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionC-32" value="Cumple" name="indices-cuadros-etc"><label class="form-check-label" for="formCheck-2">Cumple</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="introduccionI-32" value="No Cumple" name="indices-cuadros-etc" required="" checked=""><label class="form-check-label" for="formCheck-1">No Cumple</label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right"><button class="btn btn-primary btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="rubricaBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
+    onclick="guardarRubrica()">Aprobar</button>
+
+<script type="text/javascript">
+
+function guardarRubrica() {
+    var formData = $("#rubrica-tcuantitativa");
     var data = getFormData(formData);
     alert(JSON.stringify(data));
    /* $.ajax({
@@ -402,7 +1002,7 @@ function aprobarTrabajo() {
         
         //alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
     },
-    timeout: 15000
+    timeout: 25000
     });
 }
 </script><button class="btn btn-danger btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="noAprobarBTN" type="button" style=";margin-left: 0.5em;" title="Aplica una aprobación que indica que la solicitud cumple con los requisitos."
@@ -433,7 +1033,7 @@ function noAprobarTrabajo() {
 }
 </script></div>
         <div class="text-center"><button class="btn btn-primary d-none btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="pazysalvoBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Descarga el documento de paz y salvo."
-    onclick="descargarPS();">Descargar Paz y Salvo</button>
+    onclick="descargarPS();">Reenviar Paz y Salvo</button>
 
 <script type="text/javascript">
 
