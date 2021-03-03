@@ -1011,25 +1011,39 @@ function aprobarTrabajo() {
 <script type="text/javascript">
 
 function noAprobarTrabajo() {
-    /*var repo = 0;
+//$('#guardandoMD').removeClass('fade');
+    $('#guardandoMD').modal('show');
+    var repo = 0;
     var obs = $('#observacionTA').val();
     var idps = $('#idpsText').val();
     if($('#aprobarCHK').is(':checked'))
       repo = 1;
     $.ajax({
       type: "POST",
-      url: 'http://api.sibudelas.local/trabajodegrado/aprobar/'+idps+'/'+Cookies.get('session_token'),
+      url: direccionAPI+'/trabajodegrado/desactivar/'+idps+'/'+Cookies.get('session_token'),
       data: { repositorio : repo, observacion : obs},
       success: function(data){
-        alert('Has aprobado el trabajo de grado con ID: '+idps);
-        $("#aprobarBTN").hide();
-        $("#checkField").hide();
+      setTimeout(function() {
+            $('#guardandoMD').modal('hide');
+            $('#correctoMD').modal('show');
+        },500);
+        $("#aprobarBTN").addClass('d-none');
+        $("#noAprobarBTN").addClass('d-none');
+        $("#repositorioCheck").addClass('d-none');
+        $("#observacionTA").addClass('d-none');
     },
-    error: function(data){
-        alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
+    error: function(jqXHR, exception){
+        /*var json = $.parseJSON(jqXHR.responseText);*/
+        //alert(jqXHR.responseText);
+        setTimeout(function() {
+            $('#guardandoMD').modal('hide');
+            $('#errorMD').modal('show');
+        },1000);
+        
+        //alert('Este Trabajo de grado ya ha sido aprobado anteriormente');
     },
-    timeout: 15000
-    });*/
+    timeout: 25000
+    });
 }
 </script></div>
         <div class="text-center"><button class="btn btn-primary d-none btn-lg text-center border rounded" data-toggle="tooltip" data-placement="bottom" id="pazysalvoBTN" type="button" style="background-color: rgb(38,78,120);margin-left: 0.5em;" title="Descarga el documento de paz y salvo."
