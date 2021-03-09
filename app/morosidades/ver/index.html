@@ -53,8 +53,8 @@
                 <li class="nav-item list-group-item pl-1 py-2"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="fa fa-book"><span class="ml-2 align-middle" href="#">Trabajo de Grado</span></i></a>
                     <ul class="nav list-group flex-column d-inline-block submenu">
                         <li class="nav-item list-group-item pl-3 d-none" id="crear-solicitud"><a class="nav-link active" data-toggle="tooltip" data-bss-tooltip="" href="/app/ps/nuevo" title="Crea una solicitud de aprobación para Paz y Salvo">Crear Solicitud</a></li>
-                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes">Pendientes</a></li>
-                        <li class="nav-item list-group-item pl-3"><a class="nav-link" href="/app/ps/pendientes/estudiantes">Trámites Detenidos</a></li>
+                        <li class="nav-item list-group-item pl-3 d-none" id="pendientes"><a class="nav-link" href="/app/ps/pendientes">Pendientes</a></li>
+                        <li class="nav-item list-group-item pl-3 d-none" id="t-detenidos"><a class="nav-link" href="/app/ps/pendientes/estudiantes">Trámites Detenidos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item list-group-item pl-1 py-2 d-none" id="ps-especial"><a class="nav-link" href="#" style="color: rgb(74,82,108);"><i class="far fa-bookmark"><span class="ml-2 align-middle" href="#">Paz y Salvo Especiales</span></i></a>
@@ -175,6 +175,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
