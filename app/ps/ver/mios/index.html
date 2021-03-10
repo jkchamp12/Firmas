@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-419">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -10,21 +10,21 @@
     <meta name="description" content="SIBUDELAS Centralizado es el sitio oficial del Sistema Integrado de Bibliotecas de la UDELAS.">
     <meta property="og:image" content="https://sibudelas.udelas.ac.pa/assets/img/leer2.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/img/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../../../assets/img/android-chrome-512x512.png">
-    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../../../assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,greek-ext">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../../../assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="../../../assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="../../../assets/css/styles.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../../../assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -93,7 +93,7 @@
         </div>
     </div>
     <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white" style="font-family: 'Open Sans', sans-serif;margin-bottom: 3em;">
-        <div class="container-fluid"><a href="#"><img src="../../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a href="#"><img src="../../../../assets/img/logo-SIBUDELAS%20no%20text.png" width="170px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="font-size: 15px;">
                 <ul class="navbar-nav ml-auto" id="items-nav">
                     <li class="nav-item"><a class="nav-link active" href="/">INICIO</a></li>
@@ -109,11 +109,74 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="margin-right: 5em;width: 90wh;">
-        <div id="pdf-trabajo"></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="guardandoMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Guardando Datos&nbsp; <i class="fas fa-spinner fas fa-circle-notch fa-spin"></i>&nbsp;</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los datos se están guardando&nbsp;</p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
     </div>
-    <script src="../../../assets/js/jquery.min.js"></script>
-    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <div class="modal fade" role="dialog" tabindex="-1" id="correctoMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Operación Correcta</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Se ha guardado correctamente los datos</p><i class="fa fa-check" style="font-size: 63px;color: var(--success);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="errorMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Algo a salido mal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">Al parecer no pudimos completar su petición.</p><i class="fa fa-warning" style="font-size: 63px;color: var(--orange);"></i>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-left: 5em;">
+        <div class="col-md-12 search-table-col">
+            <h5>Mis Trabajos de Grado Registrados</h5>
+            <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="Buscar..." name="busquedaT"></div><span class="counter pull-right"></span>
+            <div class="table-responsive table-bordered text-nowrap text-break table table-hover table-bordered results">
+                <table class="table table-striped table-bordered table-sm" id="tabla_morosos">
+                    <thead class="bill-header cs">
+                        <tr style="font-size: 13px;color: #0e153a;">
+                            <th class="text-truncate col-lg-1" id="trs-hd" style="width: auto;">ID</th>
+                            <th id="trs-hd" class="col-lg-2" style="width: auto;">Título del Trabajo</th>
+                            <th id="trs-hd" class="col-lg-3" style="width: auto;">Categoría</th>
+                            <th id="trs-hd" class="col-lg-2" style="width: auto;">Carrera</th>
+                            <th id="trs-hd" class="col-lg-2" style="width: auto;">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_pendientes">
+                        <tr class="warning no-result">
+                            <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                            <td>Cell 2</td>
+                            <td>Cell 3</td>
+                            <td>Cell 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -128,10 +191,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js" crossorigin="anonymous"></script>
-    <script src="../../../assets/js/script.min.js"></script>
-    <script src="../../../assets/js/login/redir-session.min.js"></script>
-    <script src="../../../assets/js/mainApp.min.js"></script>
-    <script src="../../../assets/js/pdfobject/pdf.min.js"></script>
+    <script src="../../../../assets/js/script.min.js"></script>
+    <script src="../../../../assets/js/login/redir-session.min.js"></script>
+    <script src="../../../../assets/js/mainApp.min.js"></script>
+    <script src="../../../../assets/js/trabajogrado/mios.min.js"></script>
 </body>
 
 </html>
