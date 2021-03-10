@@ -62,7 +62,7 @@
     </nav>
     <div class="border rounded login-card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" style="font-family: Roboto, sans-serif;filter: blur(0px);">
         <p class="profile-name-card"> <i class="fa fa-unlock-alt d-inline" style="width:0;height:0;font-size:56px;color:rgb(104,145,162);"></i></p>
-        <form id="loginForm" class="form-signin" action="" method="PUT"><span class="reauth-email" style="margin:11px;"> </span><input class="form-control" type="password" id="inputPassword" required="" placeholder="Nueva Contraseña" name="contrasena" style="margin-bottom: 0px;" autofocus="" autocomplete="off" minlength="8" pattern="^.{8,}$"><span id="mensajeP" style="color: var(--danger);font-size: 12px;"></span><input class="form-control" type="password" id="inputPassword-1" required="" placeholder="Repetir Contraseña" name="contrasenaRepetir" style="margin-top: 10px;" minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" autocomplete="off"><span id="mensajeS" style="color: var(--danger);font-size: 12px;"></span><input class="form-control d-none" type="text" id="recaptchaResponse" readonly="" name="recaptcha"><span class="reauth-email" style="margin:11px;"> </span>      <script src="https://www.google.com/recaptcha/api.js?render=6Ld_zQEVAAAAABBSckt82-ue84VpZKyK7JJ8oqHH"></script>
+        <form id="loginForm" class="form-signin" action="" method="PUT"><span class="reauth-email" style="margin:11px;"> </span><input class="form-control" type="password" id="inputPassword" required="" placeholder="Nueva Contraseña" name="contrasena" style="margin-bottom: 0px;" autofocus="" autocomplete="off" minlength="8"><span id="mensajeP" style="color: var(--danger);font-size: 12px;"></span><input class="form-control" type="password" id="inputPassword-1" required="" placeholder="Repetir Contraseña" name="contrasenaRepetir" style="margin-top: 10px;" minlength="8" autocomplete="off"><span id="mensajeS" style="color: var(--danger);font-size: 12px;"></span><input class="form-control d-none" type="text" id="recaptchaResponse" readonly="" name="recaptcha"><span class="reauth-email" style="margin:11px;"> </span>      <script src="https://www.google.com/recaptcha/api.js?render=6Ld_zQEVAAAAABBSckt82-ue84VpZKyK7JJ8oqHH"></script>
   <script>
   grecaptcha.ready(function() {
       grecaptcha.execute('6Ld_zQEVAAAAABBSckt82-ue84VpZKyK7JJ8oqHH', {action: '/'}).then(function(token) {
@@ -99,6 +99,20 @@
             </div>
         </div>
     </footer>
+    <div class="modal fade" role="dialog" tabindex="-1" id="errorTokenMD">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Algo a salido mal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 18px;">El enlace que usó ya ha vencido; debe realizar el proceso nuevamente.</p><i class="fa fa-warning" style="font-size: 63px;color: var(--orange);"></i>
+                    <div class="container" style="padding-top: 1em;"><a class="btn btn-dark" role="button" data-toggle="tooltip" data-bss-tooltip="" href="/app/login/restore" title="Presione para empezar el proceso nuevamente">Solucionar</a></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="errorMD">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
